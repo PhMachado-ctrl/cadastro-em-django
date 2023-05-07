@@ -12,12 +12,21 @@
   </head>
   <body>
     <!-- As a heading -->
-    <nav class="navbar navbar-light bg-light">
+    <nav style="background-color: aquamarine !important;" class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+        <span class="navbar-brand mb-0 h1">Cadastre-me</span>
       </div>
     </nav>
-    <h1>Cadastre-me!</h1>
+    <!--Action é para onde os dados serão levados-->
+    <form action="{% url 'listagm_usuarios' %}">
+      <div style="text-align: center;" class="container">
+        <h1> Cadastro de Usuário </h1>
+        Nome <input class="form-control-sm" type="text">
+        Idade <input class="form-control-sm" type="text">
+        <Button>Enviar</Button>
+      </div>
+    </form>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
