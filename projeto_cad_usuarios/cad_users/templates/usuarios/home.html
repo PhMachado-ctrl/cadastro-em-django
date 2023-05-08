@@ -18,11 +18,11 @@
       </div>
     </nav>
     <!--Action é para onde os dados serão levados-->
-    <form action="{% url 'listagm_usuarios' %}">
+    <form action="{% url 'listagem_usuarios' %}" method="post">
       <div style="text-align: center;" class="container">
         <h1> Cadastro de Usuário </h1>
-        Nome <input class="form-control-sm" type="text">
-        Idade <input class="form-control-sm" type="text">
+        Nome <input name="nome" class="form-control-sm" type="text">
+        Idade <input name="idade" class="form-control-sm" type="text">
         <Button>Enviar</Button>
       </div>
     </form>
