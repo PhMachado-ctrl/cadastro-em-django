@@ -19,6 +19,7 @@
     </nav>
     <!--Action é para onde os dados serão levados-->
     <form action="{% url 'listagem_usuarios' %}" method="post">
+      {% csrf_token %} <!--Necessario por caua do erro de segurança-->
       <div style="text-align: center;" class="container">
         <h1> Cadastro de Usuário </h1>
         Nome <input name="nome" class="form-control-sm" type="text">
