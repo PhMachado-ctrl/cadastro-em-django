@@ -1,4 +1,19 @@
 {% extends 'usuarios/base.html' %}
+
+{% block scripts %}
+    <script>
+        function limparTabela() {
+            const tabela = document.querySelector('.table');
+            const linhas = tabela.getElementsByTagName('tr');
+            
+            // Começando do índice 1 para excluir a linha do cabeçalho
+            for (let i = 1; i < linhas.length; i++) {
+                tabela.deleteRow(i);
+            }
+        }
+    </script>
+{% endblock %}
+
 {% block conteudo %}
 <div class="container">
     <h1>Usuários Cadastrados:</h1>
